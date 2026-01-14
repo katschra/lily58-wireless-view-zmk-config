@@ -41,7 +41,7 @@
 
             display-name = "2 - MacOS";
             bindings = <
-&to 0      &kp F1    &kp F2  &kp F3    &kp F4         &kp F5                        &kp F6    &kp F7          &kp F8        &kp F9     &kp F10  &kp F11
+&to 2      &kp F1    &kp F2  &kp F3    &kp F4         &kp F5                        &kp F6    &kp F7          &kp F8        &kp F9     &kp F10  &kp F11
 &trans     &trans    &trans  &trans    &kp BACKSPACE  &kp DELETE                    &trans    &trans          &kp UP_ARROW  &trans     &trans   &kp F12
 &kp GRAVE  &kp EXCL  &kp AT  &kp HASH  &kp HASH       &kp ENTER                     &kp HOME  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &kp END  &trans
 &trans     &trans    &trans  &trans    &trans         &trans      &trans    &trans  &trans    &trans          &trans        &trans     &trans   &trans
@@ -59,6 +59,19 @@
 &kp SINGLE_QUOTE  &kp A   &kp S   &kp D     &kp F             &kp G                          &kp H            &kp J          &kp K       &kp L    &kp SEMI   &kp EQUAL
 &kp LEFT_CONTROL  &kp Y   &kp X   &kp C     &kp V             &kp B   &kp LBKT     &kp RBKT  &kp N            &kp M          &kp COMMA   &kp DOT  &kp MINUS  &kp GRAVE
                                   &kp LALT  &kp LEFT_CONTROL  &sl 1   &kp SPACE    &kp RET   &kp RIGHT_SHIFT  &kp BACKSPACE  &kp DELETE
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        Linux2 {
+            display-name = "2 - Linux";
+            bindings = <
+&to 0      &kp F1    &kp F2  &kp F3    &kp F4         &kp F5                        &kp F6    &kp F7          &kp F8        &kp F9     &kp F10  &kp F11
+&trans     &trans    &trans  &trans    &kp BACKSPACE  &kp DELETE                    &trans    &trans          &kp UP_ARROW  &trans     &trans   &kp F12
+&kp GRAVE  &kp EXCL  &kp AT  &kp HASH  &kp HASH       &kp ENTER                     &kp HOME  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &kp END  &trans
+&trans     &trans    &trans  &trans    &trans         &trans      &trans    &trans  &trans    &trans          &trans        &trans     &trans   &trans
+                             &trans    &trans         &trans      &trans    &trans  &trans    &trans          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
