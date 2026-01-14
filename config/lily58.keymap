@@ -19,13 +19,13 @@
             // | SHIFT |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
-            display-name = "Base";
+            display-name = "1 - MacOS";
             bindings = <
-&kp ESC           &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                         &kp N6           &kp N7      &kp N8         &kp N9   &kp N0     &kp SLASH
-&kp TAB           &kp Q   &kp W   &kp E     &kp R     &kp T                          &kp Z            &kp U       &kp I          &kp O    &kp P      &kp BACKSLASH
-&kp SINGLE_QUOTE  &kp A   &kp S   &kp D     &kp F     &kp G                          &kp H            &kp J       &kp K          &kp L    &kp SEMI   &kp EQUAL
-&kp LEFT_CONTROL  &kp Y   &kp X   &kp C     &kp V     &kp B   &kp LBKT     &kp RBKT  &kp N            &kp M       &kp COMMA      &kp DOT  &kp MINUS  &kp GRAVE
-                                  &kp LALT  &kp LGUI  &tog 1  &kp SPACE    &kp RET   &kp RIGHT_SHIFT  &kp DELETE  &kp BACKSPACE
+&kp ESC           &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                         &kp N6           &kp N7         &kp N8      &kp N9   &kp N0     &kp SLASH
+&kp TAB           &kp Q   &kp W   &kp E     &kp R     &kp T                          &kp Z            &kp U          &kp I       &kp O    &kp P      &kp BACKSLASH
+&kp SINGLE_QUOTE  &kp A   &kp S   &kp D     &kp F     &kp G                          &kp H            &kp J          &kp K       &kp L    &kp SEMI   &kp EQUAL
+&kp LEFT_CONTROL  &kp Y   &kp X   &kp C     &kp V     &kp B   &kp LBKT     &kp RBKT  &kp N            &kp M          &kp COMMA   &kp DOT  &kp MINUS  &kp GRAVE
+                                  &kp LALT  &kp LGUI  &sl 1   &kp SPACE    &kp RET   &kp RIGHT_SHIFT  &kp BACKSPACE  &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -39,39 +39,35 @@
             // |       |     |     |      |      |      |        |  |       |      |  _    |  +    |  {   |   }   |  "|"  |
             //                     |      |      |      |        |  |       |      |       |       |
 
-            display-name = "Lower";
+            display-name = "2 - MacOS";
             bindings = <
-&to 2      &trans    &trans  &trans    &trans      &trans                           &trans    &trans          &trans        &trans     &trans    &trans
-&kp F1     &kp F2    &kp F3  &kp F4    &kp DELETE  &kp BACKSPACE                    &kp F7    &kp F8          &kp UP_ARROW  &kp F10    &kp F11   &kp F12
-&kp GRAVE  &kp EXCL  &kp AT  &kp HASH  &kp HASH    &kp ENTER                        &kp HOME  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &kp END   &kp TILDE
-&trans     &trans    &trans  &trans    &trans      &trans         &trans    &trans  &trans    &kp MINUS       &kp KP_PLUS   &kp LBRC   &kp RBRC  &kp PIPE
-                             &trans    &trans      &trans         &trans    &trans  &trans    &trans          &trans
+&to 0      &kp F1    &kp F2  &kp F3    &kp F4         &kp F5                        &kp F6    &kp F7          &kp F8        &kp F9     &kp F10  &kp F11
+&trans     &trans    &trans  &trans    &kp BACKSPACE  &kp DELETE                    &trans    &trans          &kp UP_ARROW  &trans     &trans   &kp F12
+&kp GRAVE  &kp EXCL  &kp AT  &kp HASH  &kp HASH       &kp ENTER                     &kp HOME  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &kp END  &trans
+&trans     &trans    &trans  &trans    &trans         &trans      &trans    &trans  &trans    &trans          &trans        &trans     &trans   &trans
+                             &trans    &trans         &trans      &trans    &trans  &trans    &trans          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        Linux-1 {
-            // ------------------------------------------------------------------------------------------------------------
-            // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
-            // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |   7   |   8   |  9   |   0   |       |
-            // |   F1  |  F2 |  F3 |  F4  |  F5  |  F6  |                   |      |   <-  |   v   |  ^   |  ->   |       |
-            // |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |        |  |       |  +   |   -   |   =   |  [   |   ]   |   \   |
-            //                     |      |      |      |        |  |       |      |       |       |
-
-            display-name = "Raise";
+        Linux1 {
+            display-name = "1 - Linux";
             bindings = <
-&trans  &trans  &trans  &trans   &trans   &trans                     &trans       &trans     &trans     &trans    &trans     &trans
-&trans  &trans  &trans  &trans   &trans   &trans                     &kp N6       &kp N7     &kp N8     &kp N9    &kp N0     &trans
-&kp F1  &kp F2  &kp F3  &kp F4   &kp F5   &kp F6                     &trans       &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &trans
-&kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &trans    &trans  &kp KP_PLUS  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT   &kp BSLH
-                        &trans   &trans   &trans   &trans    &trans  &trans       &trans     &trans
+&kp ESC           &kp N1  &kp N2  &kp N3    &kp N4            &kp N5                         &kp N6           &kp N7         &kp N8      &kp N9   &kp N0     &kp SLASH
+&kp TAB           &kp Q   &kp W   &kp E     &kp R             &kp T                          &kp Z            &kp U          &kp I       &kp O    &kp P      &kp BACKSLASH
+&kp SINGLE_QUOTE  &kp A   &kp S   &kp D     &kp F             &kp G                          &kp H            &kp J          &kp K       &kp L    &kp SEMI   &kp EQUAL
+&kp LEFT_CONTROL  &kp Y   &kp X   &kp C     &kp V             &kp B   &kp LBKT     &kp RBKT  &kp N            &kp M          &kp COMMA   &kp DOT  &kp MINUS  &kp GRAVE
+                                  &kp LALT  &kp LEFT_CONTROL  &sl 1   &kp SPACE    &kp RET   &kp RIGHT_SHIFT  &kp BACKSPACE  &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        extra_1 { status = "reserved"; };
+        extra_1 {
+            status = "reserved";
+            sensor-bindings = <&inc_dec_kp 0 0>;
+        };
 
         extra_2 { status = "reserved"; };
 
