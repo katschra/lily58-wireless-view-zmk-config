@@ -64,6 +64,19 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
+        Linux2 {
+            display-name = "2 - Linux";
+            bindings = <
+&to 0      &kp F1        &kp F2         &kp F3        &kp F4            &kp F5                              &kp F6             &kp F7          &kp F8        &kp F9     &kp F10  &kp F11
+&trans     &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3  &kp NUMBER_4      &kp N5                              &kp NUMBER_6       &kp N7          &kp N8        &kp N9     &kp N0   &kp F12
+&kp GRAVE  &kp EXCL      &kp BACKSPACE  &kp DELETE    &kp HASH          &kp ENTER                           &kp HOME           &kp LEFT_ARROW  &kp UP_ARROW  &kp RIGHT  &kp END  &kp SLASH
+&trans     &trans        &trans         &trans        &trans            &kp LEFT_BRACKET  &trans    &trans  &kp RIGHT_BRACKET  &trans          &kp DOWN      &trans     &trans   &trans
+                                        &trans        &kp LEFT_CONTROL  &trans            &trans    &trans  &trans             &kp DELETE      &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
         extra_1 {
             status = "reserved";
             sensor-bindings = <&inc_dec_kp 0 0>;
