@@ -24,14 +24,14 @@
 &kp ESC           &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                        &kp N6           &kp N7         &kp N8             &kp N9   &kp N0     &kp SLASH
 &kp TAB           &kp Q   &kp W   &kp E     &kp R     &kp T                         &kp Z            &kp U          &kp I              &kp O    &kp P      &kp BACKSLASH
 &kp SINGLE_QUOTE  &kp A   &kp S   &kp D     &kp F     &kp G                         &kp H            &kp J          &kp K              &kp L    &kp SEMI   &kp EQUAL
-&kp LEFT_CONTROL  &kp Y   &kp X   &kp C     &kp V     &kp B   &to 3        &to 0    &kp N            &kp M          &kp COMMA          &kp DOT  &kp MINUS  &kp GRAVE
+&kp LEFT_CONTROL  &kp Y   &kp X   &kp C     &kp V     &kp B   &to 2        &to 0    &kp N            &kp M          &kp COMMA          &kp DOT  &kp MINUS  &kp GRAVE
                                   &kp LALT  &kp LGUI  &sl 1   &kp SPACE    &kp RET  &kp RIGHT_SHIFT  &kp BACKSPACE  &kp RIGHT_CONTROL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        Lower {
+        MacOS2 {
             // ------------------------------------------------------------------------------------------------------------
             // | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
             // |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
@@ -39,12 +39,38 @@
             // |       |     |     |      |      |      |        |  |       |      |  _    |  +    |  {   |   }   |  "|"  |
             //                     |      |      |      |        |  |       |      |       |       |
 
-            display-name = "Lower";
+            display-name = "2 - MacOS";
             bindings = <
 &trans       &kp F1         &kp F2        &kp F3        &kp F4        &kp F5                                 &kp F6             &kp F7          &kp F8        &kp F9     &kp F10  &kp F11
 &kp ESCAPE   &kp NUMBER_1   &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5                                 &kp NUMBER_6       &kp N7          &kp N8        &kp N9     &kp N0   &kp SLASH
 &kp LA(F12)  &kp LG(SLASH)  &trans        &trans        &kp LG(F)     &kp LG(LS(F))                          &kp HOME           &kp LEFT_ARROW  &kp UP_ARROW  &kp RIGHT  &kp END  &kp TILDE
-&trans       &trans         &kp LG(X)     &kp LG(C)     &kp LG(V)     &kp LEFT_BRACKET  &to 2     &trans     &kp RIGHT_BRACKET  &trans          &kp DOWN      &trans     &trans   &trans
+&trans       &trans         &kp LG(X)     &kp LG(C)     &kp LG(V)     &kp LEFT_BRACKET  &to 3     &trans     &kp RIGHT_BRACKET  &trans          &kp DOWN      &trans     &trans   &trans
+                                          &trans        &trans        &trans            &trans    &kp LC(B)  &trans             &kp DELETE      &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        Linux1 {
+            display-name = "1 - Linux";
+            bindings = <
+&kp ESC           &kp N1  &kp N2  &kp N3    &kp N4            &kp N5                        &kp N6           &kp N7         &kp N8      &kp N9   &kp N0     &kp SLASH
+&kp TAB           &kp Q   &kp W   &kp E     &kp R             &kp T                         &kp Z            &kp U          &kp I       &kp O    &kp P      &kp BACKSLASH
+&kp SINGLE_QUOTE  &kp A   &kp S   &kp D     &kp F             &kp G                         &kp H            &kp J          &kp K       &kp L    &kp SEMI   &kp EQUAL
+&kp LEFT_CONTROL  &kp Y   &kp X   &kp C     &kp V             &kp B   &trans       &trans   &kp N            &kp M          &kp COMMA   &kp DOT  &kp MINUS  &kp GRAVE
+                                  &kp LALT  &kp LEFT_CONTROL  &sl 3   &kp SPACE    &kp RET  &kp RIGHT_SHIFT  &kp BACKSPACE  &kp DELETE
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        Linux2 {
+            display-name = "2 - Linux";
+            bindings = <
+&trans       &kp F1         &kp F2        &kp F3        &kp F4        &kp F5                                 &kp F6             &kp F7          &kp F8        &kp F9     &kp F10  &kp F11
+&kp ESCAPE   &kp NUMBER_1   &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5                                 &kp NUMBER_6       &kp N7          &kp N8        &kp N9     &kp N0   &kp SLASH
+&kp LA(F12)  &kp LC(SLASH)  &trans        &trans        &kp LC(F)     &kp LS(LC(F))                          &kp HOME           &kp LEFT_ARROW  &kp UP_ARROW  &kp RIGHT  &kp END  &kp TILDE
+&trans       &trans         &kp LC(X)     &kp LC(C)     &kp LC(V)     &kp LEFT_BRACKET  &to 3     &trans     &kp RIGHT_BRACKET  &trans          &kp DOWN      &trans     &trans   &trans
                                           &trans        &trans        &trans            &trans    &kp LC(B)  &trans             &kp DELETE      &trans
             >;
 
@@ -56,22 +82,9 @@
 &trans  &trans        &trans         &trans     &trans     &trans                       &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans        &trans         &trans     &trans     &kp LG(Z)                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp LG(FSLH)  &kp LS(POUND)  &kp DEL    &kp BSPC   &kp RET                      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans        &kp LG(X)      &kp LG(C)  &kp LG(V)  &trans     &to 0     &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &kp LG(X)      &kp LG(C)  &kp LG(V)  &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
                                      &trans     &trans     &trans     &trans    &trans  &trans  &trans  &to 0
             >;
-        };
-
-        Linux1 {
-            display-name = "1 - Linux";
-            bindings = <
-&kp ESC           &kp N1  &kp N2  &kp N3    &kp N4            &kp N5                        &kp N6           &kp N7         &kp N8      &kp N9   &kp N0     &kp SLASH
-&kp TAB           &kp Q   &kp W   &kp E     &kp R             &kp T                         &kp Z            &kp U          &kp I       &kp O    &kp P      &kp BACKSLASH
-&kp SINGLE_QUOTE  &kp A   &kp S   &kp D     &kp F             &kp G                         &kp H            &kp J          &kp K       &kp L    &kp SEMI   &kp EQUAL
-&kp LEFT_CONTROL  &kp Y   &kp X   &kp C     &kp V             &kp B   &trans       &trans   &kp N            &kp M          &kp COMMA   &kp DOT  &kp MINUS  &kp GRAVE
-                                  &kp LALT  &kp LEFT_CONTROL  &sl 1   &kp SPACE    &kp RET  &kp RIGHT_SHIFT  &kp BACKSPACE  &kp DELETE
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         extra_1 {
